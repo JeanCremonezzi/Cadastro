@@ -5,7 +5,7 @@ public class Formulario {
     private String phone;
     private String email;
     private Boolean joinEmailList;
-    private Sex sex;
+    private String sex;
     private String city;
     private String uf;
 
@@ -18,7 +18,8 @@ public class Formulario {
         form.setPhone(phone);
         form.setEmail(email);
         form.setJoinEmailList(joinList);
-        form.setSex(Sex.valueOf(sex));
+        //form.setSex(Sex.valueOf(sex));
+        form.setSex(sex);
         form.setCity(city);
         form.setUf(uf);
 
@@ -57,11 +58,11 @@ public class Formulario {
         this.joinEmailList = joinEmailList;
     }
 
-    public Sex getSex() {
+    public String getSex() {
         return sex;
     }
 
-    public void setSex(Sex sex) {
+    public void setSex(String sex) {
         this.sex = sex;
     }
 
@@ -88,7 +89,7 @@ public class Formulario {
                 "\nTelefone: " + this.phone +
                 "\nEmail: " + this.email +
                 "\nIngressa na lista de emails: " + this.joinEmailList +
-                "\nSexo: " + this.sex.toString() +
+                "\nSexo: " + this.sex +
                 "\nCidade: " + this.city +
                 "\nUF: " + this.uf;
     }

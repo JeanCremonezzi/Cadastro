@@ -4,7 +4,7 @@ public enum Sex {
     MALE("Masculino"),
     FEMALE("Feminino");
 
-    private String label;
+    private final String label;
 
     Sex(String label) {
         this.label = label;

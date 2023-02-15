@@ -87,7 +87,8 @@
             android:id="@+id/sexRadioMale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Masculino"/>
+            android:text="Masculino"
+            android:checked="true"/>
 
         <RadioButton
             android:id="@+id/sexRadioFemale"
@@ -152,8 +153,7 @@
             android:layout_height="wrap_content"
             android:text="@string/saveButton"
             android:layout_weight="1"
-            android:layout_marginLeft="4dp"
-            />
+            android:layout_marginLeft="4dp"/>
 
     </LinearLayout>
 

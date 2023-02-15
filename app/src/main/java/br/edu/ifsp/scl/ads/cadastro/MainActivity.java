@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText cityInp;
     private Spinner ufSpin;
     private Button saveBtn;
+    private Button cleanBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         ufSpin = (Spinner) findViewById(R.id.ufSpin);
 
         saveBtn = (Button) findViewById(R.id.saveBtn);
+        cleanBtn = (Button) findViewById(R.id.cleanBtn);
 
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +69,19 @@ public class MainActivity extends AppCompatActivity {
                 );
 
                 Toast.makeText(getApplicationContext(), form.toString(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+        cleanBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nameInp.setText("");
+                phoneInp.setText("");
+                emailInp.setText("");
+                emailListChk.setChecked(false);
+                sexRadioGroup.check(R.id.sexRadioMale);
+                cityInp.setText("");
+                ufSpin.setSelection(0);
             }
         });
     }

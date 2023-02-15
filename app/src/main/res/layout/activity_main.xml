@@ -140,7 +140,7 @@
         android:layout_marginTop="8dp">
 
         <Button
-            android:id="@+id/clearBtn"
+            android:id="@+id/cleanBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/cleanButton"

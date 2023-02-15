@@ -2,7 +2,7 @@ package br.edu.ifsp.scl.ads.cadastro.model;
 
 public enum Sex {
     MALE("Masculino"),
-    FEMALE("Feminimo");
+    FEMALE("Feminino");
 
     private String label;
 

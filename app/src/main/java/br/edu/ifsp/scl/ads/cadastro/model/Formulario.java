@@ -5,20 +5,19 @@ public class Formulario {
     private String phone;
     private String email;
     private Boolean joinEmailList;
-    private String sex;
+    private Sex sex;
     private String city;
     private String uf;
 
     public Formulario() {}
 
-    public static Formulario getInstance(String name, String phone, String email, boolean joinList, String sex, String city, String uf) {
+    public static Formulario getInstance(String name, String phone, String email, boolean joinList, Sex sex, String city, String uf) {
         Formulario form = new Formulario();
 
         form.setName(name);
         form.setPhone(phone);
         form.setEmail(email);
         form.setJoinEmailList(joinList);
-        //form.setSex(Sex.valueOf(sex));
         form.setSex(sex);
         form.setCity(city);
         form.setUf(uf);
@@ -58,11 +57,11 @@ public class Formulario {
         this.joinEmailList = joinEmailList;
     }
 
-    public String getSex() {
+    public Sex getSex() {
         return sex;
     }
 
-    public void setSex(String sex) {
+    public void setSex(Sex sex) {
         this.sex = sex;
     }
 

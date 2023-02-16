@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText emailInp;
     private CheckBox emailListChk;
     private RadioGroup sexRadioGroup;
+    private RadioButton sexRadioMale;
+    private RadioButton sexRadioFemale;
     private EditText cityInp;
     private Spinner ufSpin;
     private Button saveBtn;
@@ -37,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         emailInp = (EditText) findViewById(R.id.emailInp);
         emailListChk = (CheckBox) findViewById(R.id.emailListChk);
         sexRadioGroup = (RadioGroup) findViewById(R.id.sexRadioGroup);
+        sexRadioMale = (RadioButton) findViewById(R.id.sexRadioMale);
+        sexRadioFemale = (RadioButton) findViewById(R.id.sexRadioFemale);
         cityInp = (EditText) findViewById(R.id.cityInp);
         ufSpin = (Spinner) findViewById(R.id.ufSpin);
 
@@ -50,11 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 String phone = String.valueOf(phoneInp.getText());
                 String email = String.valueOf(emailInp.getText());
                 boolean joinList = emailListChk.isChecked();
-
-                String sex = ((RadioButton) findViewById(sexRadioGroup.getCheckedRadioButtonId()))
-                        .getText()
-                        .toString();
-
+                Sex sex = sexRadioMale.isChecked() ? Sex.MALE : Sex.FEMALE;
                 String city = String.valueOf(cityInp.getText());
                 String uf = ufSpin.getSelectedItem().toString();
 
